@@ -57,7 +57,7 @@
                         <div class="single-contact-info">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             <h4>Email</h4>
-                            <p>reservasi.rus@gmail.com</p>
+                            <p>rusreservasi@gmail.com</p>
                         </div>
                     </div>
                 </div>

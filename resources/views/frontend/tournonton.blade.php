@@ -95,6 +95,7 @@
                     <div class="hotel-reservation--area mb-100">
                         <form action="{{url('store')}}" method="post">
                           @csrf
+                          <input type="text" class="input-small form-control" name="paket" value="Tourvisit + Nonton" hidden>
                           <div class="form-group mb-30">
                           <label for="Nama">Nama</label>
                               <div class="row no-gutters">
@@ -104,14 +105,13 @@
                               </div>
                             </div>
                             <div class="form-group mb-30">
+                            
                                 <label for="checkInDate">Tanggal</label>
-                                <div class="input-daterange" id="datepicker">
                                     <div class="row no-gutters">
                                         <div class="col-6">
-                                            <input type="text" class="input-small form-control" name="tanggal" id="checkInDate" placeholder="Pilih Tanggal">
+                                            <input type="date" class="input-small form-control" name="tanggal" id="checkInDate" placeholder="Pilih Tanggal">
                                         </div>
 
-                                    </div>
                                 </div>
                             </div>
                             <div class="form-group mb-30">

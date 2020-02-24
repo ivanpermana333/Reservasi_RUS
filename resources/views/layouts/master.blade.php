@@ -12,9 +12,10 @@
     <title>Reservasi RUS</title>
 
     <!-- Fix Logo -->
-    <link rel="icon" href="./img/core-img/4a4fb0ec-2b69-4c5f-8a48-8cbf7556d704_200x200.png">
+    <link rel="icon" href="{{ asset('roberto/img/core-img/4a4fb0ec-2b69-4c5f-8a48-8cbf7556d704_200x200.png') }}">
 
     <!-- Stylesheet -->
+    
     <link rel="stylesheet" href="{{ asset('roberto/style.css') }}">
     
 
@@ -64,10 +65,10 @@
                     <nav class="classy-navbar justify-content-between" id="robertoNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="index.html" style="margin-left: -140px;"><img src="img/core-img/4a4fb0ec-2b69-4c5f-8a48-8cbf7556d704_200x200.png" width="60px" height="60px" alt=""></a>
+                        <a class="nav-brand" href="index.html" style="margin-left: -140px;"><img src="{{ asset('roberto/img/core-img/4a4fb0ec-2b69-4c5f-8a48-8cbf7556d704_200x200.png') }}" width="60px" height="60px" alt=""></a>
 
                         <!-- Alamat -->
-                        <p style="font-size: 11px; margin-left: -480px; margin-top: 15px;"><b style="font-size: 16px;">SMK Raden Umar Said</b><br/>Jalan Sukun Raya 9, Besito, Gebog, Kudus</p>
+                        <p style="font-size: 11px; margin-left: -650px; margin-top: 15px;"><b style="font-size: 16px;">SMK Raden Umar Said</b><br/>Jalan Sukun Raya 9, Besito, Gebog, Kudus</p>
 
                         <!-- Navbar Toggler -->
                         <div class="classy-navbar-toggler">

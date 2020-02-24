@@ -1,9 +1,6 @@
 @extends('layouts.master')
 
 @section('content')
-
-
-
     <!-- Breadcrumb Area Start -->
     <div class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url({{asset('roberto/img/bg-img/IMG_20191018_134618.jpg')}});">
         <div class="container h-100">
@@ -99,6 +96,7 @@
                     <div class="hotel-reservation--area mb-100">
                         <form action="{{url('store')}}" method="post">
                           @csrf
+                          <input type="text" class="input-small form-control" name="paket" value="Tour Visit" hidden>
                           <div class="form-group mb-30">
                           <label for="Nama">Nama</label>
                               <div class="row no-gutters">
@@ -109,14 +107,14 @@
                             </div>
                             <div class="form-group mb-30">
                             
-                                <label for="checkInDate">Tanggal</label>
-                                    <div class="row no-gutters">
-                                        <div class="col-6">
-                                            <input type="date" class="input-small form-control" name="tanggal" id="checkInDate" placeholder="Pilih Tanggal">
-                                        </div>
+                            <label for="checkInDate">Tanggal</label>
+                                <div class="row no-gutters">
+                                    <div class="col-6">
+                                        <input type="date" class="input-small form-control" name="tanggal" id="checkInDate" placeholder="Pilih Tanggal">
+                                    </div>
 
-                                </div>
                             </div>
+                            <!-- Illuminate\Database\Eloquent\Collection -->
                             <div class="form-group mb-30">
                                 <label for="guests">Jumlah Orang *</label>
                                 <div class="row">

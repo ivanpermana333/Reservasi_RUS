@@ -30,6 +30,7 @@ Route::get('/admin', function () {
     return view('Admin.master');
 });
 
+
 Auth::routes();
 
 Route::get('/create','BookingController@create');
@@ -37,4 +38,8 @@ Route::post('/store','BookingController@store');
 Route::get('/table','BookingController@index');
 Route::get('/kirim-email', 'EmailController@index');
 Route::get('/terima/{booking}', 'BookingController@show');
+Route::delete('/tolak/{booking}', 'BookingController@destroy');
+// Route::get('/detail/{booking}', 'DetailController@show');
+Route::get('/detail/{booking}', 'DetailController@store');
+
 Route::get('/home', 'HomeController@index')->name('home');

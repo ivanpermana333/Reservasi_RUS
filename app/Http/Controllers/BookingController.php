@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TolakMail;
 use App\Mail\SendMail;
 use Illuminate\Support\Facades\Mail;
 use App\Booking;
@@ -58,6 +59,7 @@ class BookingController extends Controller
       $new_booking->alamat = $request->asal;
       $new_booking->email = $request->email;
       $new_booking->notelpon = $request->notelpon;
+      $new_booking->paket = $request->paket;
       $new_booking->save();
       return redirect('/')->with('status', 'Silahkan menunggun konfirmasi dari admin');;
 
@@ -72,13 +74,23 @@ class BookingController extends Controller
      */
     public function show(Booking $booking)
     {
+        //  $nota =  Booking::where('id', $booking->id);
+        //  $pesertadewasa = $nota->jumlahpesertadewasa;
+        //  $pesertaanka = $nota->jumlahpesertaanka;
+
+        //  $total =  $pesertadewasa * 20000 + $pesertaanka * 15000;
+
+
       //notif email
-         $nama = $booking->Nama;
-         $email = $booking->email;
-         
-         $kirim = Mail::to($email)->send(new SendMail($nama));
+         Booking::where('id', $booking->id)
+                  ->update([
+                      'status' => 'diterima'
+                  ]);
+         $kirim = Mail::to( $booking->email)->send(new SendMail($booking));
         if($kirim){         echo "Email telah dikirim";     } 
-        return redirect('/table')->with('status', 'Sudah Tersetujui :)');;
+        return redirect('/table')->with('status', 'Sudah Tersetujui :)');
+        
+
         
     }
 
@@ -113,7 +125,15 @@ class BookingController extends Controller
      */
     public function destroy(Booking $booking)
     {
-        //
+      //notif email
+      Booking::where('id', $booking->id)
+      ->update([
+          'status' => 'ditolak'
+                ]);
+          $kirim = Mail::to( $booking->email)->send(new TolakMail($booking));
+          if($kirim){         echo "Email telah dikirim";     } 
+          return redirect('/table')->with('status', 'Sudah DiTolak :)');
+                
       }
 
 

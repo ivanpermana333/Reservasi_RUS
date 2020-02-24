@@ -16,9 +16,9 @@ class SendMail extends Mailable
      *
      * @return void
      */
-    public function __construct($nama)
+    public function __construct($booking)
     {
-         $this->nama = $nama;
+         $this->booking = $booking;
     }
 
     /**
@@ -28,11 +28,11 @@ class SendMail extends Mailable
      */
     public function build()
     {
-         return $this->from('email@domainAnda.com')
+         return $this->from('email@domainAnda.com','Reservasi RUS')
             ->view('email')
             ->with(
             [
-                'nama' => $this->nama
+                'booking' => $this->booking
             ]);
     }
 }

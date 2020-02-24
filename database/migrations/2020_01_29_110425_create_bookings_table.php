@@ -1,4 +1,4 @@
-<?php
+`<?php
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -21,6 +21,8 @@ class CreateBookingsTable extends Migration
             $table->date('tanggal');
             $table->string('alamat');
             $table->string('email');
+            $table->string('paket');
+            $table->string('status')->default('pending');
             $table->double('notelpon');
             $table->timestamps();
         });

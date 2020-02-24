@@ -45,7 +45,7 @@
             </div>
 
             <!-- Single Welcome Slide -->
-            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url({{asset('roberto/img/bg-img/IMG_20191018_135135.jpg')}});" data-img-url="img/bg-img/IMG_20191018_135135.jpg">
+            <div class="single-welcome-slide bg-img bg-overlay" style="background-image: url({{asset('roberto/img/bg-img/20191108_111501.jpg')}});" data-img-url="img/bg-img/20191108_111501.jpg">
                 <!-- Welcome Content -->
                 <div class="welcome-content h-100">
                     <div class="container h-100">
@@ -143,7 +143,7 @@
                                  <img src="{{asset('roberto/img/bg-img/grafika-kudus1.jpg')}}" alt="">
                              </div>
                              <div class="single-thumb">
-                                 <img src="{{asset('roberto/img/bg-img/IMG_20191018_135135.jpg')}}" alt="">
+                                 <img src="{{asset('roberto/img/bg-img/IMG_20191118_152041.jpg')}}" alt="">
                              </div>
                          </div>
                          <div class="col-6">
